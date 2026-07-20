@@ -1,0 +1,460 @@
+<!DOCTYPE html><html class="dark" lang="zh-TW" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MIAO TAGGART | PERFORMANCE ARTIST</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=Hanken+Grotesk:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#131313",
+                        "secondary-container": "#00e3fd",
+                        "on-primary-fixed-variant": "#7a3000",
+                        "tertiary-fixed": "#e9ddff",
+                        "on-secondary-container": "#00616d",
+                        "surface-container-highest": "#353534",
+                        "outline": "#a98a7d",
+                        "inverse-primary": "#a04100",
+                        "primary-container": "#ff6b00",
+                        "tertiary-fixed-dim": "#d1bcff",
+                        "background": "#131313",
+                        "on-secondary-fixed-variant": "#004f58",
+                        "surface-variant": "#353534",
+                        "on-tertiary": "#3c0090",
+                        "inverse-on-surface": "#313030",
+                        "inverse-surface": "#e5e2e1",
+                        "error-container": "#93000a",
+                        "secondary": "#bdf4ff",
+                        "on-error-container": "#ffdad6",
+                        "on-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "on-tertiary-fixed-variant": "#5700c9",
+                        "tertiary-container": "#a883ff",
+                        "on-primary": "#561f00",
+                        "on-primary-container": "#572000",
+                        "primary": "#ffb693",
+                        "surface-container-high": "#2a2a2a",
+                        "tertiary": "#d1bcff",
+                        "primary-fixed-dim": "#ffb693",
+                        "surface-tint": "#ffb693",
+                        "on-secondary": "#00363d",
+                        "surface-container-low": "#1c1b1b",
+                        "on-surface-variant": "#e2bfb0",
+                        "on-tertiary-container": "#3d0092",
+                        "on-error": "#690005",
+                        "secondary-fixed": "#9cf0ff",
+                        "surface": "#131313",
+                        "secondary-fixed-dim": "#00daf3",
+                        "on-secondary-fixed": "#001f24",
+                        "outline-variant": "#5a4136",
+                        "surface-container": "#201f1f",
+                        "primary-fixed": "#ffdbcc",
+                        "error": "#ffb4ab",
+                        "surface-bright": "#393939",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary-fixed": "#351000",
+                        "on-tertiary-fixed": "#23005b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "section-gap": "120px",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Syne"],
+                        "headline-lg-mobile": ["Syne"],
+                        "label-sm": ["JetBrains Mono"],
+                        "headline-xl": ["Syne"]
+                    },
+                    "fontSize": {
+                        "body-md": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-xl": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0A0A0A;
+            color: #E5E2E1;
+            scroll-behavior: smooth;
+        }
+        .rim-light {
+            box-shadow: inset 0 0 0 1px rgba(255, 107, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        .rim-light-hover:hover {
+            box-shadow: inset 0 0 0 1px rgba(255, 107, 0, 0.6), 0 0 30px rgba(255, 107, 0, 0.15);
+        }
+        .diagonal-bg {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+        .spotlight-gradient {
+            background: radial-gradient(circle at center, rgba(255, 107, 0, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .text-outline {
+            -webkit-text-stroke: 1px rgba(255, 182, 147, 0.3);
+            color: transparent;
+        }
+        .performance-card {
+            background: #1A1A1A;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        .performance-card:hover {
+            transform: translateY(-5px) rotate(1deg);
+            border-color: #ff6b00;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="fixed top-0 z-50 w-full bg-surface-dim/90 backdrop-blur-md border-b border-outline-variant/30 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 shadow-md transition-all duration-300">
+<div class="font-headline-lg text-primary uppercase tracking-tighter">MIAO TAGGART</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-sm text-label-sm" href="#home">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-sm text-label-sm" href="#about">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-sm text-label-sm" href="#experience">Experience</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-sm text-label-sm" href="#gallery">Gallery</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-sm text-label-sm" href="#contact">Contact</a>
+</nav>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-headline-lg text-sm uppercase tracking-wider hover:brightness-110 transition-all">BOOK NOW</button>
+</header>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-start overflow-hidden pt-20 px-margin-mobile md:px-margin-desktop" id="home">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent z-10"></div>
+<img class="w-full h-full object-cover grayscale-[0.3] brightness-75 scale-105 -scale-x-100" data-alt="A cinematic low-angle portrait of Miao Taggart performing in a vibrant night market. The artist, an expressive man with glasses, balances a crystal clear sphere on his fingers as bokeh lights shimmer in the background like magical orbs. The scene is dominated by deep blacks and vibrant orange hues, creating a high-energy stage atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUML8lfpRE5RUwM0hi25b55CChMy_SXsS46joekY7cqPv-amE7eA8ZxIab1df3G_GPDy-A3P3roJKuY6fvR3tw4tOHwqHfKi-ACRvTAullR7Fwv0hfwYHyZT_NaXmrB7K5UHjyk4EQBbQzyp7NCWLXtXZXYT_rohTgLUGd2KHxPb6AonK-Qg8_WlUi4364q1k3DHW3xAa9mSOo-sYwntXcbORqE5im7NBr_zAwnQbmyy9NIFk2eP9GVI29WkpqKn6EeA">
+</div>
+<div class="relative z-20 max-w-4xl">
+<span class="inline-block px-3 py-1 border border-secondary-container text-secondary-container font-label-sm text-xs mb-6 uppercase tracking-[0.2em] animate-pulse">Master of Magic &amp; Juggling</span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface leading-tight mb-8">
+                Miao Taggart:<br>
+<span class="text-primary-container">十年磨一劍，</span><br>
+                用奇蹟點亮您的活動
+            </h1>
+<p class="text-on-surface-variant max-w-xl mb-10 text-body-md">
+                Blending the mystery of magic with physical precision. Since 2013, Miao has transformed street performance into a high-octane art form across Taiwan.
+            </p>
+<div class="flex gap-4">
+<a class="bg-primary-container text-on-primary-container px- unit*4 py-4 px-10 font-headline-lg text-lg uppercase tracking-wider hover:scale-105 transition-transform flex items-center gap-2" href="#contact">
+                    Start Booking <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="border border-outline text-on-surface px-10 py-4 font-headline-lg text-lg uppercase tracking-wider hover:bg-white/5 transition-all" href="#gallery">
+                    View Portfolio
+                </a>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-on-surface-variant animate-bounce hidden md:block">
+<span class="material-symbols-outlined text-4xl">expand_more</span>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-gutter items-center relative" id="about">
+<div class="absolute top-0 right-0 w-1/2 h-full spotlight-gradient -z-10"></div>
+<div class="order-2 md:order-1">
+<div class="relative inline-block mb-8">
+<h2 class="font-headline-lg text-headline-lg uppercase relative z-10">The Artist</h2>
+<div class="absolute -bottom-2 -right-4 text-headline-xl font-headline-xl opacity-5 text-outline">ABOUT</div>
+</div>
+<p class="mb-6 text-primary font-label-sm">FROM ENGINEER TO STAGE MASTER</p>
+<p class="text-on-surface-variant mb-6 leading-relaxed">
+                自 2013 年起，瞄仔哥投身魔術、雜耍與表演藝術領域。在街頭藝人執照還一證難求的年代，他走遍各縣市考取數十張表演執照。
+            </p>
+<p class="text-on-surface-variant mb-8 leading-relaxed">
+                從工程師到街頭表演藝術家，瞄仔哥以對「表演」的熱愛，讓人生的軌跡綻放出璀璨光芒。他的節目融合逗趣互動、魔術、雜耍與故事情節，無論大人、小孩，都能在表演中找回童心與笑容。
+            </p>
+<div class="grid grid-cols-3 gap-4 border-l-2 border-primary-container pl-6 py-4">
+<div>
+<div class="font-headline-lg text-3xl text-primary">10+</div>
+<div class="font-label-sm text-xs text-on-surface-variant uppercase">Years Experience</div>
+</div>
+<div>
+<div class="font-headline-lg text-3xl text-primary">1000+</div>
+<div class="font-label-sm text-xs text-on-surface-variant uppercase">Shows Performed</div>
+</div>
+<div>
+<div class="font-headline-lg text-3xl text-primary">20+</div>
+<div class="font-label-sm text-xs text-on-surface-variant uppercase">Official Licenses</div>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2 flex justify-center">
+<div class="relative w-full aspect-square max-w-md">
+<div class="absolute -inset-4 border-2 border-primary-container/20 -rotate-3"></div>
+<div class="absolute -inset-4 border-2 border-secondary-container/20 rotate-3"></div>
+<img class="w-full h-full object-cover rim-light grayscale hover:grayscale-0 transition-all duration-700" data-alt="A portrait of artist Miao Taggart with intense, focused eyes. He is wearing a stylized performance vest. The lighting is dramatic and moody, high-contrast, casting deep shadows while highlighting the edges of his face in a warm orange glow. The overall style is modern minimalist with a hint of urban grit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz-hrrtAFq7ZLYthMAs_AjlwI8FO6Lj2_3zrx86J-i2SZPeEzwiJqk-3UOptZBpv3vaSpK6V1C8U84yOL2wYIanKmlHTK8TS_tekdjDriZCekaZ7Zfl-u2N_7oICofyY4S4AIdQaMhxWPUMVOQKGQQ289Es7Bp34MVk3P-E9EvY1NWoyima_In5ujQZxWAgSzXvhZ8gAn6iHLWd6SdnQMxg754ldysXNy2S-1pj3PrHYUkxrN9x9qsf_uLkNRUJSTfBw">
+</div>
+</div>
+</section>
+<!-- Experience Timeline Section -->
+<section class="py-section-gap bg-surface-container-lowest relative overflow-hidden" id="experience">
+<div class="px-margin-mobile md:px-margin-desktop mb-20 text-center">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase mb-4">Legacy of Wonders</h2>
+<p class="font-label-sm text-primary tracking-widest uppercase">Performance History 2013 — 2025</p>
+</div>
+<!-- Horizontal Timeline -->
+<div class="px-margin-mobile md:px-margin-desktop flex overflow-x-auto pb-10 gap-10 no-scrollbar snap-x">
+<!-- 2025-2023 -->
+<div class="flex-shrink-0 w-80 snap-start">
+<div class="text-headline-lg font-headline-lg text-outline opacity-20 mb-4 italic">2025—2023</div>
+<ul class="space-y-4 font-label-sm text-sm">
+<li class="flex items-start gap-2 text-on-surface"><span class="text-primary">✦</span> 花蓮城市空間藝術節</li>
+<li class="flex items-start gap-2 text-on-surface"><span class="text-primary">✦</span> 愛・Sharing聖誕節</li>
+<li class="flex items-start gap-2 text-on-surface-variant">桃園街頭藝人嘉年華</li>
+<li class="flex items-start gap-2 text-on-surface-variant">國慶焰火在台中</li>
+<li class="flex items-start gap-2 text-on-surface-variant">台北燈節 - 信義香堤大道</li>
+<li class="flex items-start gap-2 text-on-surface-variant">打開劇場大門-米倉劇場</li>
+</ul>
+</div>
+<!-- 2022-2020 -->
+<div class="flex-shrink-0 w-80 snap-start">
+<div class="text-headline-lg font-headline-lg text-outline opacity-20 mb-4 italic">2022—2020</div>
+<ul class="space-y-4 font-label-sm text-sm">
+<li class="flex items-start gap-2 text-on-surface"><span class="text-primary">✦</span> 獲選桃園優質街頭藝人</li>
+<li class="flex items-start gap-2 text-on-surface-variant">宜蘭礁溪跑馬古道公園</li>
+<li class="flex items-start gap-2 text-on-surface-variant">桃園萬聖城</li>
+<li class="flex items-start gap-2 text-on-surface-variant">新北耶誕城</li>
+<li class="flex items-start gap-2 text-on-surface-variant">台北燈節</li>
+<li class="flex items-start gap-2 text-on-surface-variant">兒童藝術村市集</li>
+</ul>
+</div>
+<!-- 2019-2017 -->
+<div class="flex-shrink-0 w-80 snap-start">
+<div class="text-headline-lg font-headline-lg text-outline opacity-20 mb-4 italic">2019—2017</div>
+<ul class="space-y-4 font-label-sm text-sm">
+<li class="flex items-start gap-2 text-on-surface"><span class="text-primary">✦</span> 中壢街頭藝人大賽</li>
+<li class="flex items-start gap-2 text-on-surface-variant">新竹市立動物園開幕</li>
+<li class="flex items-start gap-2 text-on-surface-variant">石門水庫-熱氣球嘉年華</li>
+<li class="flex items-start gap-2 text-on-surface-variant">淡水 Toyota 家庭日演出</li>
+<li class="flex items-start gap-2 text-on-surface-variant">宜蘭七夕情人節</li>
+<li class="flex items-start gap-2 text-on-surface-variant">機場捷運連線試乘演出</li>
+</ul>
+</div>
+<!-- 2016-2013 -->
+<div class="flex-shrink-0 w-80 snap-start">
+<div class="text-headline-lg font-headline-lg text-outline opacity-20 mb-4 italic">2016—2013</div>
+<ul class="space-y-4 font-label-sm text-sm">
+<li class="flex items-start gap-2 text-on-surface"><span class="text-primary">✦</span> 港藝街藝大賽優勝</li>
+<li class="flex items-start gap-2 text-on-surface-variant">台灣燈會</li>
+<li class="flex items-start gap-2 text-on-surface-variant">A+ 創意季</li>
+<li class="flex items-start gap-2 text-on-surface-variant">客家禾埕點金曲</li>
+<li class="flex items-start gap-2 text-on-surface-variant">初次取得雙北表演執照</li>
+<li class="flex items-start gap-2 text-on-surface-variant">創立「喵仔哥」表演品牌</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop">
+<div class="grid md:grid-cols-4 gap-gutter">
+<div class="performance-card p-8 group">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">celebration</span>
+<h3 class="font-headline-lg text-2xl mb-4 group-hover:text-primary transition-colors">商業活動演出</h3>
+<p class="text-on-surface-variant text-sm font-label-sm">大型燈會、節慶活動、尾牙春酒，打造品牌震撼亮點。</p>
+</div>
+<div class="performance-card p-8 group md:-rotate-1">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">theater_comedy</span>
+<h3 class="font-headline-lg text-2xl mb-4 group-hover:text-primary transition-colors">藝術節/市集</h3>
+<p class="text-on-surface-variant text-sm font-label-sm">街頭藝術節、文創市集，近距離感官與心靈的互動饗宴。</p>
+</div>
+<div class="performance-card p-8 group md:rotate-1">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">family_history</span>
+<h3 class="font-headline-lg text-2xl mb-4 group-hover:text-primary transition-colors">親子與校園</h3>
+<p class="text-on-surface-variant text-sm font-label-sm">寓教於樂的魔術短劇，帶領孩子進入奇幻的想像世界。</p>
+</div>
+<div class="performance-card p-8 group">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">magic_button</span>
+<h3 class="font-headline-lg text-2xl mb-4 group-hover:text-primary transition-colors">私人派對</h3>
+<p class="text-on-surface-variant text-sm font-label-sm">生日、慶典、婚禮驚喜，量身定做獨一無二的奇蹟時刻。</p>
+</div>
+</div>
+</section>
+<!-- Gallery Carousel Section -->
+<section class="py-section-gap bg-surface relative" id="gallery">
+<div class="px-margin-mobile md:px-margin-desktop flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg uppercase mb-2">Moments of Awe</h2>
+<p class="font-label-sm text-primary uppercase">Gallery 2024 Showcase</p>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 border border-outline flex items-center justify-center hover:bg-primary-container transition-all group" id="prevBtn">
+<span class="material-symbols-outlined group-hover:text-black">chevron_left</span>
+</button>
+<button class="w-12 h-12 border border-outline flex items-center justify-center hover:bg-primary-container transition-all group" id="nextBtn">
+<span class="material-symbols-outlined group-hover:text-black">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="carousel-container overflow-hidden">
+<div class="carousel-track px-margin-mobile md:px-margin-desktop gap-gutter" style="transform: translateX(-536px);">
+<div class="flex-shrink-0 w-[80vw] md:w-[40vw] aspect-video relative group overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A wide shot of a crowded city square at dusk. Miao Taggart stands on a small stage, light reflecting off juggling pins in mid-air. The crowd is a sea of mesmerized faces, illuminated by the warm glow of nearby street lamps and stage lights. The color palette is rich with deep oranges and midnight blues." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1zu0YRpRkm2rU6Wq9HcPLwdYVks9YQshPjExqYFyVY_mqQjOcEimKuuWaprlyXK00gs_VWIPlVbrHfinZ9SM_WizUlrLcu6l5djpEuzjvKK4LMIgcDdvEt7-sjxsKr4JraPfZJx0k2-_5vJ_FbS3maWmP0gMfNY6JzkkkaU43UzI4ZrscDh1njMKi31m81N0mlGtBrMUgSrgSIQh38lc1X6igFC8KpPSrzGJwuHGXLCI1HmdoIawL3QVXHFl3DHoNwg">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+<div class="text-on-surface font-label-sm text-xs uppercase tracking-widest">Main Square Performance — Taipei 2023</div>
+</div>
+</div>
+<div class="flex-shrink-0 w-[80vw] md:w-[40vw] aspect-video relative group overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A close-up shot focusing on the artist's hands skillfully manipulating a crystal ball. Light fractures through the glass, casting rainbow patterns onto the performer's black vest. The background is a blur of festive lights, creating a bokeh effect that feels like stardust. High-contrast editing emphasizes the glow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhkYaYXEzCmu3kfNtAkaDC4P0rsLWwsSazne0vwhM7QdE5BCXVievUmyp59X76Ac1qvUWavefhtBLHI0dY_hAIEz5fjLUTV40yCkz6XrkDGWo_u4abXP0xqqCPuslHhyG3uW-HtADai10a91dv2wYuEiq8qf1p22gjg0R0oQZIqpWGJlYTsbh0XPfOxs4uTBI_ti_RgQYwhwsbb0nsIxnvwHfHKvh1Ju_CgbXK6wrHotFCL77aD3Y-VNzC4trTa27gdg">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+<div class="text-on-surface font-label-sm text-xs uppercase tracking-widest">Contact Juggling Magic — Lantern Festival</div>
+</div>
+</div>
+<!-- Additional Image placeholders following the prompt -->
+<div class="flex-shrink-0 w-[80vw] md:w-[40vw] aspect-video relative group overflow-hidden">
+<div class="absolute inset-0 bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-6xl">gallery_thumbnail</span>
+</div>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An energetic action shot of a street performer launching multiple neon-colored balls into the air against a twilight sky. The exposure is perfectly timed to capture the trails of motion. The surrounding audience is blurred in excitement, creating a sense of dynamic energy and professional mastery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4N0sf_dn6vdH_bhRTDbapojOUtEKasptZQnM1TsHR4O4g7VpfUwWm2p18Qu0sg5zrDdKt8k978IZGMS_EKDA0KItscTmAqbjh0Oj-dpQz6cw4Mylse0ClP8XjwhGRUmBERt04q-rAlW6Py5INGWeJJ6hQQZUA_IIvofkHy7scqxrF4pLS37hkK2QBzpICCRZZBbhP1O2DIYJHvxuxNkbmN6Yxib6ndGc2WP5bwBNFuPArjJlAN6gBDYyqcnnoyDrbFg">
+</div>
+</div>
+</div>
+</section>
+<!-- Booking / Contact Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop relative" id="contact">
+<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-20">
+<div>
+<h2 class="font-headline-lg text-headline-lg uppercase mb-8">Bring the Magic to Your Stage</h2>
+<p class="text-on-surface-variant mb-12">
+                    Ready to elevate your event? Whether it's a corporate banquet, a festival, or a private celebration, let's create something unforgettable together.
+                </p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<div class="text-xs font-label-sm text-on-surface-variant uppercase tracking-widest">Phone</div>
+<div class="font-headline-lg text-xl">0912-345-678</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<div class="text-xs font-label-sm text-on-surface-variant uppercase tracking-widest">Email</div>
+<div class="font-headline-lg text-xl">miaotaggart@gmail.com</div>
+</div>
+</div>
+<div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary"><span class="material-symbols-outlined">chat</span></div><div><div class="text-xs font-label-sm text-on-surface-variant uppercase tracking-widest">LINE ID</div><div class="font-headline-lg text-xl">ollivander382</div></div></div><div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary"><span class="material-symbols-outlined">public</span></div><div><div class="text-xs font-label-sm text-on-surface-variant uppercase tracking-widest">Facebook</div><div class="font-headline-lg text-xl">miao999</div></div></div></div>
+</div>
+<form class="bg-surface-container-low p-10 rim-light relative" action="mailto:miaotaggart@gmail.com?subject=來自miaotaggart的詢問" method="POST">
+<div class="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-primary"></div>
+<div class="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-primary"></div>
+<div class="space-y-6">
+<div>
+<label class="block font-label-sm text-xs text-on-surface-variant uppercase mb-2">Your Name</label>
+<input class="w-full bg-surface-dim border-none border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-on-surface transition-all" type="text">
+</div>
+<div>
+<label class="block font-label-sm text-xs text-on-surface-variant uppercase mb-2">Event Date</label>
+<input class="w-full bg-surface-dim border-none border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-on-surface transition-all" type="date">
+</div>
+<div>
+<label class="block font-label-sm text-xs text-on-surface-variant uppercase mb-2">Performance Type</label>
+<select class="w-full bg-surface-dim border-none border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-on-surface transition-all">
+<option>Commercial Performance</option>
+<option>Art Festival</option>
+<option>Private Party</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-xs text-on-surface-variant uppercase mb-2">Message</label>
+<textarea class="w-full bg-surface-dim border-none border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-on-surface transition-all" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-4 font-headline-lg text-lg uppercase tracking-widest hover:brightness-110 transition-all" type="submit">Send Inquiry</button>
+<div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary"><span class="material-symbols-outlined">chat</span></div><div><div class="text-xs font-label-sm text-on-surface-variant uppercase tracking-widest">LINE ID</div><div class="font-headline-lg text-xl">ollivander382</div></div></div><div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary"><span class="material-symbols-outlined">public</span></div><div><div class="text-xs font-label-sm text-on-surface-variant uppercase tracking-widest">Facebook</div><div class="font-headline-lg text-xl">miao999</div></div></div></div>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/20 py-section-gap px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-center gap-gutter">
+<div class="font-headline-lg text-primary text-3xl">MIAO TAGGART</div>
+<div class="flex gap-8"><a class="text-on-surface-variant hover:text-secondary-container transition-colors font-label-sm text-label-sm" href="https://line.me/ti/p/~ollivander382">LINE</a>
+<a class="text-on-surface-variant hover:text-secondary-container transition-colors font-label-sm text-label-sm" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-secondary-container transition-colors font-label-sm text-label-sm" href="https://facebook.com/miao999">Facebook</a>
+<a class="text-on-surface-variant hover:text-secondary-container transition-colors font-label-sm text-label-sm" href="#">YouTube</a>
+<a class="text-on-surface-variant hover:text-secondary-container transition-colors font-label-sm text-label-sm" href="#">LinkedIn</a>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">
+                © 2024 MIAO TAGGART PERFORMANCE ART. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+<script>
+        // Carousel Logic
+        const track = document.querySelector('.carousel-track');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        let currentIdx = 0;
+
+        function updateCarousel() {
+            const width = track.children[0].offsetWidth + 24; // 24 is gap
+            track.style.transform = `translateX(-${currentIdx * width}px)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (currentIdx < track.children.length - 1) {
+                currentIdx++;
+                updateCarousel();
+            } else {
+                currentIdx = 0;
+                updateCarousel();
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentIdx > 0) {
+                currentIdx--;
+                updateCarousel();
+            }
+        });
+
+        // Auto-play
+        setInterval(() => {
+            if (currentIdx < track.children.length - 1) {
+                currentIdx++;
+            } else {
+                currentIdx = 0;
+            }
+            updateCarousel();
+        }, 5000);
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('py-2', 'bg-surface-dim');
+                header.classList.remove('py-4', 'bg-surface-dim/90');
+            } else {
+                header.classList.remove('py-2', 'bg-surface-dim');
+                header.classList.add('py-4', 'bg-surface-dim/90');
+            }
+        });
+    </script>
+
+
+</body></html>
