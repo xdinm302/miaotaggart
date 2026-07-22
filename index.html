@@ -142,33 +142,43 @@
 <button class="bg-primary-container text-on-primary-container px-6 py-2 font-headline-lg text-sm uppercase tracking-wider hover:brightness-110 transition-all">BOOK NOW</button>
 </header>
 <!-- Hero Section -->
+<!-- Hero Section (已修復動態與語法錯誤) -->
 <section class="relative h-screen w-full flex items-center justify-start overflow-hidden pt-20 px-margin-mobile md:px-margin-desktop" id="home">
-<div class="absolute inset-0 z-0">
-<div class="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent z-10"></div>
-<img class="w-full h-full object-cover grayscale-[0.3] brightness-75 scale-105 -scale-x-100" data-alt="A cinematic low-angle portrait of Miao Taggart performing in a vibrant night market. The artist, an expressive man with glasses, balances a crystal clear sphere on his fingers as bokeh lights shimmer in the background like magical orbs. The scene is dominated by deep blacks and vibrant orange hues, creating a high-energy stage atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPdBWnlhQH73wkpEtMQmWvEFJdSLmf5yOOai_7o802BczqhZyrujEtm1WjL2nz1-86PqbhkYd3nRbw3gnwuYFgLy4PmgR55OgHXxPV7CqRXqsa33rVcbQz9gZ4PCo7rRS0JFHJtuWbhl8eq_ky8JiA1Fvq5q9DhqdZO10LhhnCQh2MVTAiH00ibJgj2Dmi-lbbJ_JYNjT7bm5we8ElSsBc0eRPXO1tl-ptC3zTKXFoofkIGMKOVjiLQkQeZJh3x0AEbg">
-</div>
-<div class="relative z-20 max-w-4xl">
-<span class="inline-block px-3 py-1 border border-secondary-container text-secondary-container font-label-sm text-xs mb-6 uppercase tracking-[0.2em] animate-pulse">Master of Magic &amp; Juggling</span>
-<h1 class="font-headline-xl text-headline-xl text-on-surface leading-tight mb-8">
-                Miao Taggart~ 喵仔哥<br>
-<span class="text-primary-container">十年磨一球</span><br>
-                用奇蹟點亮您的活動
-            </h1>
-<p class="text-on-surface-variant max-w-xl mb-10 text-body-md">
-                Blending the mystery of magic with physical precision. Since 2013, Miao has transformed street performance into a high-octane art form across Taiwan.
-            </p>
-<div class="flex gap-4">
-<a class="bg-primary-container text-on-primary-container px- unit*4 py-4 px-10 font-headline-lg text-lg uppercase tracking-wider hover:scale-105 transition-transform flex items-center gap-2" href="#contact">
-                    Start Booking <span class="material-symbols-outlined">arrow_forward</span>
-</a>
-<a class="border border-outline text-on-surface px-10 py-4 font-headline-lg text-lg uppercase tracking-wider hover:bg-white/5 transition-all" href="#gallery">
-                    View Portfolio
-                </a>
-</div>
-</div>
-<div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-on-surface-variant animate-bounce hidden md:block">
-<span class="material-symbols-outlined text-4xl">expand_more</span>
-</div>
+  <!-- 背景圖與遮罩 -->
+  <div class="absolute inset-0 z-0">
+    <div class="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent z-10"></div>
+    <img class="w-full h-full object-cover grayscale-[0.3] brightness-75 scale-105 -scale-x-100 transition-transform duration-1000 ease-out hover:scale-110" data-alt="A cinematic low-angle portrait of Miao Taggart performing in a vibrant night market." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPdBWnlhQH73wkpEtMQmWvEFJdSLmf5yOOai_7o802BczqhZyrujEtm1WjL2nz1-86PqbhkYd3nRbw3gnwuYFgLy4PmgR55OgHXxPV7CqRXqsa33rVcbQz9gZ4PCo7rRS0JFHJtuWbhl8eq_ky8JiA1Fvq5q9DhqdZO10LhhnCQh2MVTAiH00ibJgj2Dmi-lbbJ_JYNjT7bm5we8ElSsBc0eRPXO1tl-ptC3zTKXFoofkIGMKOVjiLQkQeZJh3x0AEbg">
+  </div>
+
+  <!-- 主要內容區 -->
+  <div class="relative z-20 max-w-4xl">
+    <span class="inline-block px-3 py-1 border border-secondary-container text-secondary-container font-label-sm text-xs mb-6 uppercase tracking-[0.2em] animate-pulse shadow-[0_0_10px_rgba(0,227,253,0.3)]">
+      Master of Magic &amp; Juggling
+    </span>
+    <h1 class="font-headline-xl text-headline-xl text-on-surface leading-tight mb-8">
+      Miao Taggart~ 喵仔哥<br>
+      <span class="text-primary-container">十年磨一球</span><br>
+      用奇蹟點亮您的活動
+    </h1>
+    <p class="text-on-surface-variant max-w-xl mb-10 text-body-md">
+      Blending the mystery of magic with physical precision. Since 2013, Miao has transformed street performance into a high-octane art form across Taiwan.
+    </p>
+
+    <!-- 行動按鈕（修正 px 語法與 hover 動態） -->
+    <div class="flex flex-wrap gap-4">
+      <a class="bg-primary-container text-on-primary-container px-8 py-4 font-headline-lg text-lg uppercase tracking-wider hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-primary-container/20" href="#contact">
+        Start Booking <span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+      </a>
+      <a class="border border-outline text-on-surface px-8 py-4 font-headline-lg text-lg uppercase tracking-wider hover:bg-white/10 hover:border-primary transition-all duration-300" href="#gallery">
+        View Portfolio
+      </a>
+    </div>
+  </div>
+
+  <!-- 向下滾動指示（已修正：全螢幕尺寸皆可顯示與彈跳） -->
+  <a href="#about" class="absolute bottom-10 left-1/2 -translate-x-1/2 text-on-surface-variant hover:text-primary animate-bounce transition-colors duration-300 z-20">
+    <span class="material-symbols-outlined text-4xl">expand_more</span>
+  </a>
 </section>
 <!-- About Section -->
 <section class="py-section-gap px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-gutter items-center relative" id="about">
